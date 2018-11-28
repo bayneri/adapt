@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Halil Cetiner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./assets/prettify.css" rel="stylesheet" media="screen">
+  <link href="./assets/style.css" rel="stylesheet" media="screen, print">
+  <script src="./assets/polyfill.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./assets/main.js"></script>
+  <style type="text/css">
+    :root #content>#center>.dose>.dosesingle,
+    :root #content>#right>.dose>.dosesingle,
+    :root #header+#content>#left>#rlblock_left {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./assets/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lodash" src="./assets/lodash.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales" src="./assets/locale.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api_project.js"
+    src="./assets/api_project.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api_data.js" src="./assets/api_data.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utilsSampleRequest"
+    src="./assets/send_sample_request.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pathToRegexp" src="./assets/index.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="prettify" src="./assets/prettify.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebars" src="./assets/handlebars.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/de.js"
+    src="./assets/de.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="./assets/bootstrap.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebarsExtended"
+    src="./assets/handlebars_helper.js"></script>
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="diffMatchPatch"
+    src="./assets/diff_match_patch.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id="sidenav" class="span2">
+        <nav id="scrollingNav">
+          <ul class="sidenav nav nav-list">
+            <li class="nav-header active" data-group="User"><a href="#api-User">User</a></li>
+            <li data-group="User" data-name="GetUser" data-version="0.0.0" class="">
+              <a href="#api-User-GetUser">Get User information</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="content">
+        <div id="project">
+          <div class="pull-left">
+            <h1>Halil Cetiner</h1>
+            <h2>apiDoc of myself</h2>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div id="header"></div>
+        <div id="sections">
+          <section id="api-User">
+            <h1>User</h1>
+            <div id="api-User-GetUser">
+
+              <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+                <div class="pull-left">
+                  <h1>User - Get User information</h1>
+                </div>
+                <div class="clearfix"></div>
+
+
+                <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">/user</span></code></pre>
+
+                <h2>Success 200</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 30%">Field</th>
+                      <th style="width: 10%">Type</th>
+                      <th style="width: 70%">Sample Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="code">firstname</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p>Halil</p>
+
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="code">lastname</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p>Cetiner</p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">current_company</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p><a href="https://zeplin.io" target="_blank">Zeplin</a></p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">title</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p>Software Engineer</p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">university</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p><a href="https://boun.edu.tr" target="_blank">Bogazici University</a></p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">github</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p><a href="https://github.com/cetinerhalil" target="_blank"><i class="fab fa-github"></i>/cetinerhalil</a></p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">linkedin</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p><a href="https://linkedin.com/in/cetinerhalil" target="_blank"><i class="fab fa-linkedin"></i>/cetinerhalil</a></p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">twitter</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p><a href="https://twitter.com/cetinerhalil" target="_blank"><i class="fab fa-twitter"></i>/cetinerhalil</a></p>
+
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="code">blog</td>
+                      <td>
+                        String
+                      </td>
+                      <td>
+                        <p><a href="https://medium.com/@cetinerhalil" target="_blank"><i class="fab fa-medium"></i>/@cetinerhalil</a></p>
+
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <ul class="nav nav-tabs nav-tabs-examples">
+                  <li class="active">
+                    <a href="#success-response">Success-Response:</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                  <div class="tab-pane active" id="success-response">
+                    <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"firstname"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Halil"</span><span class="pun">,</span><span class="pln">
+      </span><span class="str">"lastname"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Cetiner"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"current_company"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Zeplin"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Software Engineer"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"university"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bogazici University"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"github"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://github.com/cetinerhalil"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"linkedin"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://linkedin.com/in/cetinerhalil"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"twitter"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://twitter.com/cetinerhalil"</span><span class="pln">,<span class="pln">
+      </span><span class="str">"blog"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://medium.com/@cetiner"</span><span class="pln">,
+    </span><span class="pun">}</span></code></pre>
+                  </div>
+                </div>
+
+
+
+                <h2>Error 4xx</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 30%">Field</th>
+
+                      <th style="width: 70%">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="code">UserNotFound</td>
+                      <td>
+                        <p>I'm usually accessible but if you get this error, try <a href="mailto:halil@cetiner.me">halil@cetiner.me</a>.</p>
+
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <ul class="nav nav-tabs nav-tabs-examples">
+                  <li class="active">
+                    <a href="#error-response">Error-Response:</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                  <div class="tab-pane active" id="error-response">
+                    <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+                  </div>
+                </div>
+
+
+
+
+
+
+              </article>
+
+            </div>
+          </section>
+        </div>
+        <div id="footer"></div>
+        <div id="generator">
+          <div class="content">
+            apiDoc as personal website \ • /
+            Developed based on <a href="http://apidocjs.com/">apiDoc</a> template
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script data-main="main.js" src="./assets/require.min.js"></script>
+
+
+</body>
+
+</html>
