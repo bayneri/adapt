@@ -531,3 +531,12 @@ ul.nav-tabs {
   }
 
 } /* /@media print */
+
+@media only screen and (max-width: 767px) {
+  #sidenav {
+      display: none;
+  }
+  #content {
+    margin-left: 0
+  }
+}
