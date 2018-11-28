@@ -9,10 +9,8 @@
   <link href="./assets/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="./assets/prettify.css" rel="stylesheet" media="screen">
   <link href="./assets/style.css" rel="stylesheet" media="screen, print">
-  <script src="./assets/polyfill.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./assets/main.js"></script>
   <style type="text/css">
     :root #content>#center>.dose>.dosesingle,
     :root #content>#right>.dose>.dosesingle,
@@ -21,24 +19,6 @@
     }
   </style>
   <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./assets/jquery.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lodash" src="./assets/lodash.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales" src="./assets/locale.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api_project.js"
-    src="./assets/api_project.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api_data.js" src="./assets/api_data.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utilsSampleRequest"
-    src="./assets/send_sample_request.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pathToRegexp" src="./assets/index.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="prettify" src="./assets/prettify.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebars" src="./assets/handlebars.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/de.js"
-    src="./assets/de.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="./assets/bootstrap.min.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebarsExtended"
-    src="./assets/handlebars_helper.js"></script>
-  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="diffMatchPatch"
-    src="./assets/diff_match_patch.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./assets/css">
 </head>
 
 <body>
@@ -51,6 +31,7 @@
             <li class="nav-header active" data-group="User"><a href="#api-User">User</a></li>
             <li data-group="User" data-name="GetUser" data-version="0.0.0" class="">
               <a href="#api-User-GetUser">Get User information</a>
+              <a href="#api-User-PatchUser">Update User information</a>
             </li>
           </ul>
         </nav>
@@ -266,6 +247,62 @@
               </article>
 
             </div>
+            <div id="api-User-PatchUser">
+
+              <article id="api-User-PatchUser-0.0.0" data-group="User" data-name="PatchUser" data-version="0.0.0">
+                <div class="pull-left">
+                  <h1>User - Update User information</h1>
+                </div>
+                <div class="clearfix"></div>
+
+
+                <pre class="prettyprint language-html prettyprinted" data-type="patch" style=""><code><span class="pln">/user</span></code></pre>
+
+
+                <h2>Error 4xx</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 30%">Field</th>
+
+                      <th style="width: 70%">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="code">UpdateNotAllowed</td>
+                      <td>
+                        <p>Don't you dare try to get into my personal space. <a href="https://www.imdb.com/title/tt1839578/characters/nm0256237" target="_blank"><i>“I'm a really private person.”</i></a></p>
+
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <ul class="nav nav-tabs nav-tabs-examples">
+                  <li class="active">
+                    <a href="#error-response">Error-Response:</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                  <div class="tab-pane active" id="error-response">
+                    <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">403</span><span class="pln"> </span><span class="typ">Forbidden</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UpdateNotAllowed"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+                  </div>
+                </div>
+
+
+
+
+
+
+              </article>
+
+            </div>
           </section>
         </div>
         <div id="footer"></div>
@@ -278,10 +315,6 @@
       </div>
     </div>
   </div>
-
-
-
-  <script data-main="main.js" src="./assets/require.min.js"></script>
 
 
 </body>
