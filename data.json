@@ -1,0 +1,56 @@
+{
+    "user": {
+        "firstname": "Halil",
+        "lastname": "Cetiner",
+        "current_company": {
+            "name": "Zeplin",
+            "link": "https://zeplin.io"
+        },
+        "position": "Software Engineer",
+        "university": {
+            "name": "Bogazici University",
+            "link": "https://boun.edu.tr"
+        },
+        "github": {
+            "name": "gh/cetinerhalil",
+            "url": "https://github.com/cetinerhalil"
+        },
+        "linkedin": {
+            "name": "li/cetinerhalil",
+            "link": "https://linkedin.com/in/cetinerhalil"
+        },
+        "twitter": {
+            "name": "tw/cetinerhalil",
+            "link": "https://twitter.com/cetinerhalil"
+        },
+        "blog": {
+            "name": "md/@cetiner",
+            "link": "https://medium.com/@cetiner"
+        }
+    },
+    "endpoints": [{
+            "name": "Get User Information",
+            "method": "get",
+            "path": "/user",
+            "success": true,
+            "error": {
+                "code": "404",
+                "errorText": "Not Found",
+                "field": "UserNotFound",
+                "message": "I'm usually accessible but if you get this error, try halil@cetiner.me."
+            }
+        },
+        {
+            "name": "Update User Information",
+            "method": "patch",
+            "path": "/user",
+            "success": false,
+            "error": {
+                "code": "403",
+                "codeText": "Forbidden",
+                "field": "UpdateNotAllowed",
+                "message": "Don't you dare try to get into my personal space. “I'm a very private person.”."
+            }
+        }
+    ]
+}
