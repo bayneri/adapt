@@ -1,15 +1,15 @@
 # adapt
 apiDoc as personal website template.
 
-## what is adapt
+## What is adapt?
 
 This project is based on [apiDoc](http://apidocjs.com/)'s official template.
 
 It all started with the idea of developing [my personal website](http://halil.cetiner.me) as API documentation. This repo contains a html generator and sample json of user data. And of course the result of the given json.
 
-This is neither well written nor well documented project. I'll be working on developing it as much as possible but contributors are welcomed too.
+This is neither a well written nor well documented project. I'll be working on developing it as much as possible but contributors are welcomed too.
 
-## how to use?
+## How to use?
 You need `node` in order to build the project. If it's not installed, install node from [here](https://nodejs.org/en/download/).
 
 1. Fill the `data.json` file with your info and customize endpoints as you want, here is the sample json with my info:
@@ -45,7 +45,6 @@ You need `node` in order to build the project. If it's not installed, install no
         }
     },
     "endpoints": [{
-            "include": true,
             "name": "Get User Information",
             "method": "get",
             "path": "/user",
@@ -58,7 +57,6 @@ You need `node` in order to build the project. If it's not installed, install no
             }
         },
         {
-            "include": true,
             "name": "Update User Information",
             "method": "patch",
             "path": "/user",
@@ -73,8 +71,9 @@ You need `node` in order to build the project. If it's not installed, install no
     ]
 }
 
-Well after filling the json, you are almost all set.
 ```
+Well, after filling the json, you are almost all set.
+
 2. Run the script `adapt.js`, which will _adapt_ your info to apiDoc structure. 😉
    ```
    node adapt.js

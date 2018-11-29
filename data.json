@@ -29,7 +29,6 @@
         }
     },
     "endpoints": [{
-            "include": true,
             "name": "Get User Information",
             "method": "get",
             "path": "/user",
@@ -42,7 +41,6 @@
             }
         },
         {
-            "include": true,
             "name": "Update User Information",
             "method": "patch",
             "path": "/user",
