@@ -100,7 +100,7 @@ Well, after filling the json, you are almost all set.
 
 After editing the json file and running the script, your personal website is ready. From then on, all you need are `index.html` file and `assets` folder.
 
-![ss](https://github.com/cetinerhalil/adapt/blob/release/v0.1.0/screenshots/ss.png)
+![ss](https://github.com/cetinerhalil/adapt/blob/master/screenshots/ss.png)
 
 ## License
 
