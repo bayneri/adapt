@@ -83,7 +83,12 @@ Well, after filling the json, you are almost all set.
    ```
    npm run-script adapt
    ```
-   
+## Result
+
+After editing the json file and running the script, your personal website is ready. From then on, all you need are `index.html` file and `assets` folder.
+
+---insert ss here---
+
 ## License
 
 As I said, this project is some sort of a clone of the [template of apiDoc](https://github.com/apidoc/apidoc/tree/master/template).
