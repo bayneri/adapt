@@ -4,7 +4,7 @@
     "description": "adapt - apiDoc as personal website template",
     "author": "Halil Cetiner (@cetinerhalil)",
     "scripts": {
-      "adapt": "node generator.js"
+      "adapt": "node adapt.js"
     },
     "repository": {
         "type": "git",
