@@ -92,7 +92,6 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
           const propertyName = data.user[x].name;
           const platformIndex = platforms.shortened.indexOf(propertyName.substr(0, 3));
           if (platformIndex != -1) {
-            console.log(propertyName)
             sample_response = `<a href="${data.user[x].link}" target="_blank"><i class="fab fa-${platforms.icons[platformIndex]}"></i>/${propertyName.substring(3)}</a>`;
           } else {
             sample_response = `<a href="${data.user[x].link}" target="_blank">${propertyName}</a>`
