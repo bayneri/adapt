@@ -15,7 +15,10 @@ You need `node` in order to build the project. If it's not installed, install no
 1. Fill the `data.json` file with your info and customize endpoints as you want, here is the sample json with my info:
 ```
   {
-
+    "header": {
+        "title": "Halil Cetiner",
+        "description": "apiDoc of myself &#x1F468&zwj;&#x1F4BB"
+    },
     "user": {
         "firstname": "Halil",
         "lastname": "Cetiner",
