@@ -1,5 +1,5 @@
 module.exports = {
-    shortened: ['be/', 'bl/', 'dc/', 'dr/', 'fb/', 'gh/', 'in/', 'li/', 'md/', 'pt/', 'sk/', 'sp/', 'tg/', 'tw/', 'vi/', 'yt/'],
+    shortened: ['be/', 'bl/', 'dc/', 'dr/', 'fb/', 'gh/', 'ig/', 'li/', 'md/', 'pt/', 'sk/', 'sp/', 'tg/', 'tw/', 'vi/', 'yt/'],
     icons: [
         'behance',
         'blogger',
