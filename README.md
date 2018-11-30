@@ -36,10 +36,6 @@ You need `node` in order to build the project. If it's not installed, install no
             "name": "li/cetinerhalil",
             "link": "https://linkedin.com/in/cetinerhalil"
         },
-        "dribble": {
-            "name": "dr/cetinerhalil",
-            "link": "https://dribble.com/cetinerhalil"
-        },
         "blog": {
             "name": "md/@cetiner",
             "link": "https://medium.com/@cetiner"
@@ -49,7 +45,7 @@ You need `node` in order to build the project. If it's not installed, install no
             "link": "https://twitter.com/cetinerhalil"
         },
         "instagram": {
-            "name": "in/cetinerhalil",
+            "name": "ig/cetinerhalil",
             "link": "https://instagram.com/cetinerhalil"
         },
         "facebook": {
