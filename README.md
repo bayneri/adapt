@@ -36,10 +36,6 @@ You need `node` in order to build the project. If it's not installed, install no
             "name": "li/cetinerhalil",
             "link": "https://linkedin.com/in/cetinerhalil"
         },
-        "dribble": {
-            "name": "dr/cetinerhalil",
-            "link": "https://dribble.com/cetinerhalil"
-        },
         "blog": {
             "name": "md/@cetiner",
             "link": "https://medium.com/@cetiner"
@@ -49,7 +45,7 @@ You need `node` in order to build the project. If it's not installed, install no
             "link": "https://twitter.com/cetinerhalil"
         },
         "instagram": {
-            "name": "in/cetinerhalil",
+            "name": "ig/cetinerhalil",
             "link": "https://instagram.com/cetinerhalil"
         },
         "facebook": {
@@ -96,6 +92,29 @@ Well, after filling the json, you are almost all set.
    ```
    npm run-script adapt
    ```
+
+## Platform Icons
+
+If you add the name of the profiles you add like `gh/cetinerhalil`, adapt will automatically parse it and replace the `gh` with GitHub icon. Here are the supported icons:
+
+| Platform | Shortened |
+|:-----------|:-----------|
+| Behance | be |
+| Blogger | bl |
+| Discord | dc |
+| Dribbble | dr |
+| Facebook | fb |
+| GitHub | gh |
+| Instagram | ig |
+| LinkedIn | li |
+| Medium | md |
+| Pinterest | pt | 
+| Skype | sk |
+| Spotify | sp|
+| Telegram | tg |
+| Twitter | tw | 
+| Vimeo | vi |
+| YouTube | yt |
 ## Result
 
 After editing the json file and running the script, your personal website is ready. From then on, all you need are `index.html` file and `assets` folder.
