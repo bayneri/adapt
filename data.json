@@ -19,25 +19,13 @@
             "name": "li/cetinerhalil",
             "link": "https://linkedin.com/in/cetinerhalil"
         },
-        "dribble": {
-            "name": "dr/cetinerhalil",
-            "link": "https://dribble.com/cetinerhalil"
-        },
-        "blog": {
-            "name": "md/@cetiner",
-            "link": "https://medium.com/@cetiner"
-        },
         "twitter": {
             "name": "tw/cetinerhalil",
             "link": "https://twitter.com/cetinerhalil"
         },
-        "instagram": {
-            "name": "in/cetinerhalil",
-            "link": "https://instagram.com/cetinerhalil"
-        },
-        "facebook": {
-            "name": "fb/cetinerhalil",
-            "link": "https://facebook.com/cetinerhalil"
+        "blog": {
+            "name": "md/@cetiner",
+            "link": "https://medium.com/@cetiner"
         }
     },
     "endpoints": [{
