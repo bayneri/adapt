@@ -1,9 +1,11 @@
 const fs = require('fs');
-fs.readFile('./data.json', 'utf8', (err, data) => {
-    if (err) throw err;
-    data = JSON.parse(data);
+const platforms = require('./platforms');
 
-    const head = `
+fs.readFile('./data.json', 'utf8', (err, data) => {
+  if (err) throw err;
+  data = JSON.parse(data);
+
+  const head = `
     <!DOCTYPE html>
     <html>
     
@@ -28,24 +30,24 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
     </head>`;
 
 
-    let nav = `
+  let nav = `
     <div id="sidenav" class="span2">
       <nav id="scrollingNav">
         <ul class="sidenav nav nav-list">
           <li class="nav-header active" data-group="User"><a href="#api-User">User</a></li>
           <li data-group="User" data-name="GetUser">`;
 
-    for (let i in data.endpoints) {
-        nav += `
-        <a href="#endpoint-${i}">${data.endpoints[i].name}</a>`
-    }
+  for (let i in data.endpoints) {
     nav += `
+        <a href="#endpoint-${i}">${data.endpoints[i].name}</a>`
+  }
+  nav += `
           </li>
         </ul>
       </nav>
     </div>`
 
-    const header = `
+  const header = `
     <div id="header">
       <div class="pull-left">
         <h1>${data.user.firstname} ${data.user.lastname}</h1>
@@ -54,13 +56,13 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
       <div class="clearfix"></div>
     </div>`;
 
-    let sections = `
+  let sections = `
     <div id="sections">
       <section id="api-User" data-name="User">
         <h1>User</h1>`
 
-    for (let i in data.endpoints) {
-        sections += `
+  for (let i in data.endpoints) {
+    sections += `
         <div id="endpoint-${i}">
           <article>
             <div class="pull-left">
@@ -69,8 +71,8 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
             <div class="clearfix"></div>
 
             <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">${data.endpoints[i].path}</span></code></pre>`;
-        if (data.endpoints[i].success) {
-            sections += `
+    if (data.endpoints[i].success) {
+      sections += `
             <h2>Success 200</h2>
             <table>
               <thead>
@@ -82,9 +84,21 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
               </thead>
               <tbody>`;
 
-            for (let x in data.user) {
-                const sample_response = typeof data.user[x] == 'string' ? data.user[x] : `<a href="${data.user[x].link}" target="_blank">${data.user[x].name}</a>`
-                sections += `
+      for (let x in data.user) {
+        let sample_response;
+        if (typeof data.user[x] == 'string') {
+          sample_response = data.user[x];
+        } else {
+          const propertyName = data.user[x].name;
+          const platformIndex = platforms.shortened.indexOf(propertyName.substr(0, 3));
+          if (platformIndex != -1) {
+            sample_response = `<a href="${data.user[x].link}" target="_blank"><i class="fab fa-${platforms.icons[platformIndex]}"></i>/${propertyName.substring(3)}</a>`;
+          } else {
+            sample_response = `<a href="${data.user[x].link}" target="_blank">${propertyName}</a>`
+          }
+        }
+        
+        sections += `
                 <tr>
                   <td class="code">${x}</td>
                   <td>String</td>
@@ -92,8 +106,8 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
                     <p>${sample_response}</p>
                   </td>
                 </tr>`;
-            }
-            sections += `
+      }
+      sections += `
             </tbody>
           </table>
 
@@ -108,21 +122,21 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
     </span><span class="pun">{</span>`;
 
-            for (let x in data.user) {
-                const value = typeof data.user[x] == 'string' ? data.user[x] : data.user[x].name;
-                sections += `<span class="pln">
+      for (let x in data.user) {
+        const value = typeof data.user[x] == 'string' ? data.user[x] : data.user[x].name;
+        sections += `<span class="pln">
         </span><span class="str">"${x}"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"${value}"</span><span class="pun">,</span>`;
-            }
+      }
 
-            sections += `<span class="pln">
+      sections += `<span class="pln">
     </span><span class="pun">}</span></code></pre>
             </div>
           </div>`
-        }
+    }
 
-        if (data.endpoints[i].error) {
-            let error = data.endpoints[i].error;
-            sections += `
+    if (data.endpoints[i].error) {
+      let error = data.endpoints[i].error;
+      sections += `
                 <h2>Error 4xx</h2>
                 <table>
                   <thead>
@@ -155,10 +169,10 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
     </span><span class="pun">}</span></code></pre>
                   </div>
                 </div>`;
-        }
-
     }
-    sections += `
+
+  }
+  sections += `
     </article>
   </div>
   <div id="generator">
@@ -169,7 +183,7 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
   </div>
 </div>`;
 
-    const body = `<body>
+  const body = `<body>
     <div class="container-fluid">
       <div class="row-fluid">
       ${nav}
@@ -181,17 +195,17 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
       </div>
     </body>`;
 
-    const html = `
+  const html = `
         ${head}
         ${body}
 
         </html>`
 
-    fs.writeFile("./index.html", html, function (err) {
-        if (err) {
-            return console.log(err);
-        }
+  fs.writeFile("./index.html", html, function (err) {
+    if (err) {
+      return console.log(err);
+    }
 
-        console.log("The file was saved!");
-    });
+    console.log("The file was saved!");
+  });
 });
