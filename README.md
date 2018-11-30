@@ -15,6 +15,7 @@ You need `node` in order to build the project. If it's not installed, install no
 1. Fill the `data.json` file with your info and customize endpoints as you want, here is the sample json with my info:
 ```
   {
+
     "user": {
         "firstname": "Halil",
         "lastname": "Cetiner",
@@ -35,13 +36,25 @@ You need `node` in order to build the project. If it's not installed, install no
             "name": "li/cetinerhalil",
             "link": "https://linkedin.com/in/cetinerhalil"
         },
-        "twitter": {
-            "name": "tw/cetinerhalil",
-            "link": "https://twitter.com/cetinerhalil"
+        "dribble": {
+            "name": "dr/cetinerhalil",
+            "link": "https://dribble.com/cetinerhalil"
         },
         "blog": {
             "name": "md/@cetiner",
             "link": "https://medium.com/@cetiner"
+        },
+        "twitter": {
+            "name": "tw/cetinerhalil",
+            "link": "https://twitter.com/cetinerhalil"
+        },
+        "instagram": {
+            "name": "in/cetinerhalil",
+            "link": "https://instagram.com/cetinerhalil"
+        },
+        "facebook": {
+            "name": "fb/cetinerhalil",
+            "link": "https://facebook.com/cetinerhalil"
         }
     },
     "endpoints": [{
@@ -87,7 +100,7 @@ Well, after filling the json, you are almost all set.
 
 After editing the json file and running the script, your personal website is ready. From then on, all you need are `index.html` file and `assets` folder.
 
----insert ss here---
+![ss](https://github.com/cetinerhalil/adapt/blob/release/v0.1.0/screenshots/ss.png)
 
 ## License
 
