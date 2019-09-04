@@ -50,8 +50,8 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
   const header = `
     <div id="header">
       <div class="pull-left">
-        <h1>${data.user.firstname} ${data.user.lastname}</h1>
-        <h2>apiDoc of myself &#x1F468&zwj;&#x1F4BB</h2>
+        <h1>${data.header.title}</h1>
+        <h2>${data.header.description}</h2>
       </div>
       <div class="clearfix"></div>
     </div>`;
