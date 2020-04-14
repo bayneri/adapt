@@ -23,8 +23,8 @@ You need `node` in order to build the project. If it's not installed, install no
         "firstname": "Halil",
         "lastname": "Cetiner",
         "current_company": {
-            "name": "Zeplin",
-            "link": "https://zeplin.io"
+            "name": "OakNorth",
+            "link": "https://oaknorth.ai"
         },
         "position": "Software Engineer",
         "university": {
