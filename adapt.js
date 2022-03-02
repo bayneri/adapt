@@ -70,7 +70,7 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
             </div>
             <div class="clearfix"></div>
 
-            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">${data.endpoints[i].path}</span></code></pre>`;
+            <pre class="prettyprint language-html prettyprinted" data-type="${data.endpoints[i].method}"><code><span class="pln">${data.endpoints[i].path}</span></code></pre>`;
     if (data.endpoints[i].success) {
       sections += `
             <h2>Success 200</h2>
